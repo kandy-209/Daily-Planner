@@ -30,7 +30,7 @@ Go to my Github which you can find the link below in Deployed Link section. Depl
 
 
 ## Images 
-![Planner Image](Assets/planner.png)
+![Planner](https://user-images.githubusercontent.com/70727213/94354189-8af87880-002d-11eb-8fae-fb2050d7b71c.png)
 
 
 ## Built_With
