@@ -19,22 +19,15 @@ function setColor() {
 
         if(parseInt(hour) === timeCheck){
             $(column[i]).addClass("present");
-        } else if 
-    
-
-        // if ($(column[i]).data("time") === hour) {
-        //     $(column[i]).addClass("present");
-
-        // }
-        // else if ($(column[i]).data("time") < hour) {
-        //     $(column[i]).addClass("future");
-        // }
-            
-        // else ($(column[i]).data("time") > hour) ;{
-        //      $(column[i]).addClass("past");
-
-        // }
-    };
+        } 
+        
+        else if (parseInt(hour) > timeCheck){
+            $(column[i]).addClass("past");
+        }
+        else (parseInt(hour) > timeCheck);{
+            $(column[i]).addClass("future");
+        }
+    }
 }
 
 function savePage() {
@@ -52,8 +45,6 @@ $(".saveBtn").on("click", function () {
 });
 
 savePage();
-// setColor(hour);
 setInterval(currentHour, 1000);
-
 
 });
