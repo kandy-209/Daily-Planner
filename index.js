@@ -7,26 +7,34 @@ var hour = moment().format('HH');
 
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-
+setColor();
 function currentHour() {
-    setColor(hour);
+    
 }
 
-function setColor(time) {
+function setColor() {
     for (var i = 0; i < column.length; i++) {
-        if ($(column[i]).attr("id") < time) {
-            $(column[i]).addClass("past");
 
-        }
-        else if ($(column[i]).attr("id") > time) {
-            $(column[i]).addClass("future");
-        }
+        var timeCheck = $(column[i]).data("time");
+
+        if(parseInt(hour) === timeCheck){
+            $(column[i]).addClass("present");
+        } else if 
+    
+
+        // if ($(column[i]).data("time") === hour) {
+        //     $(column[i]).addClass("present");
+
+        // }
+        // else if ($(column[i]).data("time") < hour) {
+        //     $(column[i]).addClass("future");
+        // }
             
-        else ($(column[i]).attr("id") < time) ;{
-             $(column[i]).addClass("present");
+        // else ($(column[i]).data("time") > hour) ;{
+        //      $(column[i]).addClass("past");
 
-        }
-    }
+        // }
+    };
 }
 
 function savePage() {
@@ -44,7 +52,8 @@ $(".saveBtn").on("click", function () {
 });
 
 savePage();
-setColor(hour);
+// setColor(hour);
 setInterval(currentHour, 1000);
+
 
 });
